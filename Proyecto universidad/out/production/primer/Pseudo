@@ -1,0 +1,130 @@
+
+-----------------------------------------------------------------------------------------------------------------------
+Consigna: Sistema de matrícula para estudiantes de una Universidad
+
+En este trabajo práctico, deberás desarrollar un sistema de matrícula para una universidad utilizando Java y las estructuras de datos de conjunto, diccionario y cola. El sistema debe permitir a los estudiantes inscribirse en las materias que deseen, ver sus horarios de clases y obtener información relevante sobre las mismas.
+ Para ello, deberás implementar las siguientes funcionalidades:
+
+    Crear un conjunto para almacenar las materias ofrecidas por la universidad. -------// listo
+
+    Crear un diccionario para almacenar la información de los estudiantes, como su nombre, número de identificación y materias inscriptas. -------// listo
+
+    Permitir agregar o quitar materias del conjunto.-------// listo
+
+    Crear una cola para almacenar los pedidos de los estudiantes para inscribirse en las materias,
+    de tal forma que se procesen en orden de llegada. // listo
+
+    Permitir la inscripción y eliminación de materias por parte de los estudiantes. // listo
+
+    Implementar una interfaz de usuario sencilla y fácil de usar para los estudiantes.
+
+El sistema debe ser fácil de usar para los estudiantes y contar con las funcionalidades básicas necesarias para la gestión de matrículas en una universidad.
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+1)Se crea un objeto de tipo conjunto (por ejemplo, HashSet o TreeSet) para almacenar las materias
+ofrecidas por la universidad.
+
+Se agregan las materias a este conjunto. Cada materia podría ser representada por un objeto de tipo "Materia",
+que contendría información como el nombre de la materia, el número de créditos, el horario, etc.
+
+Para agregar una materia al conjunto, se invocaría el método "add" del conjunto y se pasaría
+como parámetro el objeto de tipo "Materia".
+
+Para quitar una materia del conjunto, se invocaría el método "remove" del conjunto y
+se pasaría como parámetro el objeto de tipo "Materia".
+
+Además, se podría proporcionar una función para buscar materias en el conjunto, por ejemplo,
+buscar una materia por su nombre o número de créditos.
+
+Finalmente, se podría utilizar el conjunto de materias ofrecidas por la universidad en otras partes del sistema,
+por ejemplo, para mostrar una lista de materias disponibles a los estudiantes o para verificar si una materia
+específica existe en la universidad.
+
+
+2)Se crea un objeto de tipo diccionario (por ejemplo, HashMap o TreeMap) para almacenar la información }
+de los estudiantes. Cada entrada del diccionario estaría compuesta por una clave
+(el número de identificación del estudiante) y un valor
+(un objeto de tipo "Estudiante", que contenga su nombre, número de identificación y materias inscriptas).
+
+Para agregar un estudiante al diccionario, se crearía un objeto de tipo "Estudiante" y
+se asignaría su información al objeto. Luego, se invocaría el método "put" del diccionario y se pasaría
+como parámetros la clave (el número de identificación del estudiante) y el objeto de tipo "Estudiante" (como valor).
+
+Para quitar un estudiante del diccionario, se invocaría el método "remove" del diccionario y
+se pasaría como parámetro la clave (el número de identificación del estudiante).
+
+Además, se podría proporcionar una función para buscar estudiantes en el diccionario, por ejemplo,
+buscar un estudiante por su número de identificación o por el nombre de una materia en la que está inscripto.
+
+Finalmente, se podría utilizar el diccionario de estudiantes en otras partes del sistema, por ejemplo,
+para mostrar la lista de estudiantes inscriptos en una materia o para verificar si un estudiante está inscripto
+en una materia específica.
+
+
+
+3)Se crea un objeto de tipo cola (por ejemplo, LinkedList o PriorityQueue) para almacenar los pedidos
+de los estudiantes.
+
+Cada vez que un estudiante solicita inscribirse en una materia, se crea un objeto de tipo
+"Pedido" que contiene la información del estudiante y la materia en la que desea inscribirse.
+
+Luego, este objeto "Pedido" se agrega a la cola utilizando el método "offer" (o "add") de la cola.
+
+Los pedidos en la cola se procesan en orden de llegada utilizando el método "poll" de la cola,
+que elimina el primer elemento de la cola y lo devuelve.
+
+Este proceso de procesar los pedidos en orden de llegada se puede realizar en un bucle continuo,
+lo que permite que los pedidos se procesen de forma automática tan pronto como se reciben.
+
+Además, se podría proporcionar una función para buscar pedidos en la cola, por ejemplo,
+buscar un pedido por el número de identificación del estudiante o el nombre de la materia solicitada.
+
+Finalmente, se podría utilizar la cola de pedidos en otras partes del sistema, por ejemplo,
+para mostrar una lista de pedidos pendientes de procesar o para notificar a los estudiantes cuando se procesa
+su pedido.
+
+
+
+4)Se crea un objeto de tipo conjunto (por ejemplo, HashSet o TreeSet) para almacenar
+las materias ofrecidas por la universidad.
+
+Para agregar una materia al conjunto, se utiliza el método "add" del conjunto, al cual se le pasa
+como argumento el objeto "Materia" correspondiente.
+
+Para quitar una materia del conjunto, se utiliza el método "remove" del conjunto,
+al cual se le pasa como argumento el objeto "Materia" correspondiente.
+Antes de agregar o quitar una materia del conjunto, se puede verificar si la materia ya está presente
+ o no utilizando el método "contains" del conjunto.
+
+Es importante tener en cuenta que la clase "Materia" debe implementar los métodos "equals" y "hashCode"
+para que el conjunto pueda determinar correctamente si ya existe una materia con el mismo nombre o código.
+
+Además, se podría proporcionar una función para buscar materias en el conjunto, por ejemplo,
+buscar una materia por su nombre o código.
+
+Finalmente, se podría utilizar el conjunto de materias en otras partes del sistema, por ejemplo,
+para mostrar una lista de materias ofrecidas por la universidad o para filtrar los resultados de búsqueda de
+materias.
+
+
+6)El estudiante seleccionaría la materia que desea inscribirse en una lista de materias disponibles.
+Se verificaría si el estudiante ya está inscripto en esa materia, en cuyo caso no se permitiría
+una nueva inscripción.
+
+Si el estudiante no está inscripto en la materia, se agregará su información al diccionario de estudiantes,
+incluyendo la materia inscripta.
+
+Si el estudiante ya está inscripto en otras materias, se actualizaría su información en el diccionario de
+estudiantes para incluir la nueva materia inscripta.
+
+Si el estudiante desea eliminar una materia de su lista de materias inscriptas,
+se eliminaría la información correspondiente del diccionario de estudiantes.
+
+Si un estudiante intenta inscribirse en una materia que está llena,
+se agregaría su pedido a la cola de pedidos de inscripción, y se procesaría en orden de llegada una vez
+que haya una vacante disponible.
+
+Una vez que el estudiante está inscripto o eliminado de una materia,
+a
